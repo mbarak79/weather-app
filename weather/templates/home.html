@@ -16,12 +16,50 @@
         .ml-5, .mx-5 {
             margin-left: 6rem!important;
         }
+        .card{
+          margin-left: 140px;
+        }
+
+        a:hover{
+          text-decoration:none;
+      }
+
+      .jumbotron{
+        background-color: #0A1C2E;
+      }
+      .section-padding {
+        padding: 60px 0;
+      }
+      .bottom {
+          background-color: #0a1c2e;
+      }
+      .bottom .copyright {
+          color: #e5e5e5;
+          font-weight: 600;
+      }
+      .copyright a {
+          color: #f2ff49;
+          margin-left: 3px;
+          padding-right: 3px;
+      }
+      .bottom p {
+          margin-bottom: 0;
+          line-height: 50px;
+          font-size: 16px;
+          font-weight: 400;
+      }
+      .copyright p span {
+          color: #d1caca;
+      }
+      .bottom .copyright p, .bottom .copyright a:hover{
+          color: #6c6d83;
+      }
     </style>
       
-    <div class="jumbotron jumbotron-fluid bg-success">
+    <div class="jumbotron jumbotron-fluid">
         <div class="container">
-          <h1 class="display-4">Weather Search Engine</h1>
-          <p class="lead">search the weather for your city</p>
+          <h1 class="display-4 text-center text-light">Weather Search App</h1>
+          <p class="lead text-center text-light">search the weather for your city</p>
         </div>
       </div>
 
@@ -33,7 +71,7 @@
                       <label class="display-4">Weather Today</label>
                       <input type="text" value="{{ request.GET.city }}" name="city" class="form-control w-75 ml-5 text-center font-weight-bold" placeholder="Enter City">
                     </div>
-                    <button type="submit" class="btn btn-primary w-75 mb-5">Search</button>
+                    <button type="submit" class="btn btn-success w-75 mb-5">Search</button>
                   </form>
                 {% if result %}
                 <h3>{{ result.region }}</h3>
@@ -45,6 +83,20 @@
             
           </div>
     </div>
+
+    <!--Bottom Footer-->
+		<div class="bottom section-padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<div class="copyright">
+							<p>© <span>2020</span> <a href="#" class="transition">Mbarek Belouse</a> All rights reserved.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<!--Bottom Footer-->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
