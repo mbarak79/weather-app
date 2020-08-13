@@ -25,7 +25,7 @@ SECRET_KEY = 'bxli^8-&^7utvqbh!+g%8ee@vl33)1p$8ezy73p&(g+xw&uuxg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://tempolada.herokuapp.com/', '127.0.0.1']
+ALLOWED_HOSTS = ['tempolada.herokuapp.com/', '127.0.0.1']
 
 
 # Application definition
