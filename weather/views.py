@@ -24,7 +24,7 @@ def home(request):
         soup = BeautifulSoup(html_content, 'html.parser')
         result = dict()
         result['region'] = soup.find("div", attrs={"id": "wob_loc"}).text
-        result['temp_now'] = float(soup.find("span", attrs={"id": "wob_tm"}).text) - 32 * 5/9
+        result['temp_now'] = float(soup.find("span", attrs={"id": "wob_tm"}).text - 32) * 5/9
         result['dayhour'] = soup.find("div", attrs={"id": "wob_dts"}).text
         result['weather_now'] = soup.find("span", attrs={"id": "wob_dc"}).text
     return render(request, 'home.html', {'result': result})
