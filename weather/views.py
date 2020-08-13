@@ -28,3 +28,5 @@ def home(request):
         result['dayhour'] = soup.find("div", attrs={"id": "wob_dts"}).text
         result['weather_now'] = soup.find("span", attrs={"id": "wob_dc"}).text
     return render(request, 'home.html', {'result': result})
+
+
