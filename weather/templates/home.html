@@ -76,7 +76,7 @@
                 {% if result %}
                 <h3>{{ result.region }}</h3>
                 <h3>{{ result.dayhour }}</h3>
-                <h3>{{ result.temp_now }}° C</h3>
+                <h3>{{ result.temp_now|round}}° C</h3>
                 <h3>{{ result.weather_now }}</h3>
             {% endif %}
             </div>
